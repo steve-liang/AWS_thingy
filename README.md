@@ -25,3 +25,14 @@ Frequently used commands on Ubuntu
 -   Check groups and users permissions (<https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions>)
     -   `cat /etc/group`
     -   `cat /etc/passwd`
+
+MySQL
+-----
+
+There is a good walk-through from DigitalOcean (<https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial>)
+
+-   Check MySQL status
+    -   `sudo service mysql status`, ctrl-c to exit
+-   Log on MySQL
+    -   `mysql -u root -p`
+-   Generally I use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) for database management

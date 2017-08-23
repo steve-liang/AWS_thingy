@@ -34,5 +34,5 @@ There is a good walk-through from DigitalOcean (<https://www.digitalocean.com/co
 -   Check MySQL status
     -   `sudo service mysql status`, ctrl-c to exit
 -   Log on MySQL
-    -   `mysql -u root -p`
--   Generally I use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) for database management
+    -   `mysql -u root -p` for now I use root and default password
+-   Generally I use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) remotely for database management; require aws key pair for SSH authentication; also make sure EC2 security is open for MySQL port 3306

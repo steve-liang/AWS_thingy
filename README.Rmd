@@ -21,3 +21,13 @@ However, one issue I ran into is that I need to convert my .PPK (PuTTy key forma
 4. Make key read by owner ```chmod 400 your_key.pem```
 5. Log on to my EC2 instance ```ssh -i your_key.pem ubuntu@ip_address```
 
+## Frequently used commands on Ubuntu
+
+* Always keep Ubuntu up to date
+    * ```sudo apt-get update```
+  
+* Check groups and users permissions (https://www.digitalocean.com/community/tutorials/an-introduction-to-linux-permissions)
+    * ```cat /etc/group```
+    * ```cat /etc/passwd```
+
+

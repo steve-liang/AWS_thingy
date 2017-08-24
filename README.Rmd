@@ -67,4 +67,3 @@ dbFetch(rs)
 
 * check system status ```htop``` need ```sudo apt-get install htop```
 
-* 

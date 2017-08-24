@@ -40,3 +40,48 @@ There is a good walk-through from DigitalOcean (https://www.digitalocean.com/com
     * steve:l*****7*
 * Generally I use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) remotely for database management; require aws key pair for SSH authentication; also make sure EC2 security is open for MySQL port 3306
 
+* Connecting to MySQL using R
+
+```r
+library(DBI)
+conn <- dbConnect(
+    drv = RMySQL::MySQL(),
+    dbname = "mysql",
+    group = "destination",
+    host = "192.168.0.1",
+    port = 3306,
+    username = "xxx",
+    password = "xxxx")
+```
+
+```
+## Error in .local(drv, ...): Failed to connect to database: Error: Can't connect to MySQL server on '192.168.0.1' (57)
+```
+
+```r
+rs <- dbSendQuery(conn, "SELECT * FROM user;")
+```
+
+```
+## Error in dbSendQuery(conn, "SELECT * FROM user;"): object 'conn' not found
+```
+
+```r
+dbFetch(rs)
+```
+
+```
+## Error in dbFetch(rs): object 'rs' not found
+```
+
+## Ubuntu Misc
+
+* Run program as root ```R -i```
+
+* check system RAM ```cat /proc/meminfo``` or ```free -m```
+
+* check disk space ```df -h```
+
+* check system status ```htop``` need ```sudo apt-get install htop```
+
+* 
